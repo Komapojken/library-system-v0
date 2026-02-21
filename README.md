@@ -177,27 +177,29 @@ catch
 
 This guarantees that either both changes are saved or none.
 
-## How to run
+## How to Run
 
-Unzip the file.
+Clone repository.
 
-Type this in the root folder in your CLI of choice:
+Make sure Docker desktop is running.
+
+Type this in the root folder:
 
 ```bash
 docker compose up -d
-```
-
-To start the database. Make sure Docker desktop is running first.
-
-Then type in the same folder in the CLI:
-
-```bash
 dotnet restore
 dotnet ef database update
 dotnet run
 ```
 
-In the menu, you have the choice to load testdata to demo the application with.
+### Explanation
+
+- docker compose up -d: Starts the database container.
+- dotnet restore: Restores and installs required packages.
+- dotnet ef database update: Applies migrations to the database.
+- dotnet run: Runs the application.
+
+In the menu, you have the choice to load test data to demo the application with.
 
 ## Final notes
 
